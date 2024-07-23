@@ -4,7 +4,7 @@ pkgs.dockerTools.streamLayeredImage {
   name = "csi-rclone";
   tag = "latest";
   architecture = architecture;
-
+  config.Cmd = [ (if architecture == "amd64" then "/bin/linux_amd64/csi-rclone-plugin" else "/bin/linux_arm64/csi-rclone-plugin") ];
   contents = [
     csiDriverLinux
 
