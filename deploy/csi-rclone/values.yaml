@@ -60,3 +60,4 @@ csiNodepluginRclone:
   affinity: {}
 kubernetesClusterDomain: cluster.local
 logLevel: NOTICE # Valid levels: DEBUG|INFO|NOTICE|ERROR
+kubeletDir: /var/lib/kubelet
